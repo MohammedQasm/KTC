@@ -1,0 +1,92 @@
+main {
+  margin: 0;
+}
+
+#first-section {
+  background-color: #F5EDDC;
+  padding: 2rem 6.3rem 4rem 6.3rem;
+}
+
+#first-section h1 {
+  color: rgb(226, 160, 8);
+  font-weight: bolder;
+}
+
+#first-section p {
+  color: rgb(255, 160, 7);
+  font-weight: 500;
+  font-size: large;
+}
+
+th {
+  text-align: left;
+}
+
+#submit-form {
+  padding: 4px 20px;
+  margin-left: 3.5rem;
+  border: none;
+  color: gold;
+  font-size: 1rem;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  background: none;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+#submit-form:hover {
+  background: rgb(83, 244, 3);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 2px 3px 8px rgb(120, 230, 87);
+}
+
+#second-section {
+  /* am padddinga bo awaya aw space la newan first-section u second-section haya dyar nabet */
+  padding: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    rgb(142, 166, 180),
+    rgb(161, 202, 226)
+  );
+}
+
+#second-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5C2E7E;
+  margin: 1.5rem 0;
+}
+
+#second-section #places-list {
+  width: fit-content; /* widthaka ba peye qabaray contentaka dabet */
+  margin: 0 auto 48px auto; /* bo awya containaraka bbaina nawand*/
+  display: grid; /* lera grid bakar denen la jegay flex chunka grid regaman pe datat layout 2 dure (dimention) drust bkain ballam la flex tanha datwanen layouteke 1 dure drust bkain*/
+
+  grid-template-columns: 1fr 1fr 1fr; /* lera zhmaray colomakan dyare dakain lagall widthakayan */
+  gap: 20px 20px; /* gap bakar det bo drust krdne space lanewan row u colomakan la flex u grid value yakam bo space la newan rowakan wa value 2 m bo zyadkrdne space la newan colmakan */
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.the-place {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.the-place a {
+  text-decoration: none;
+}
+
+#second-section .the-place img {
+  width: 18.75rem;
+  height: 17.5rem;
+  /* bo awaya tanha ba pye qabaray content conatinar dar bkawe nak zoom in yan zoom oute bkat, lera mabastman la wenakana*/
+  object-fit: cover;
+  border-radius: 5px;
+}

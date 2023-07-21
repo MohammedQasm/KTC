@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="shortcut icon" href="img/icons/bus.ico" type="image/x-icon">
+    <title>KTC</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="index.html" id="logo">KTC</a>
+      <nav>
+        <ul id="shop">
+          <li>
+            <a href="buses.html">Buses</a>
+          </li>
+          <li>
+            <a href="taxi.html">Taxis</a>
+          </li>
+        </ul>
+        <ul id="usersneed">
+          <li>
+            <select name="lang" id="chosen-language">
+              <option value="english">English</option>
+              <option value="kurdish">Kurdish</option>
+              <option value="arabic">Arabic</option>
+            </select>
+          </li>
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+          <li>
+            <a href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="first-section">
+        <h1>Find cheap bus tickets for your next trip.</h1>
+        <p>Easily compare and book your next trip with KTC</p>
+
+        <table>
+          <form action="/" method="POST" id="set">
+            <tr>
+              <th><label for="orginal-place">orginal place</label></th>
+              <th><label for="destinaion">Destinaion</label></th>
+              <th><label for="date-time">Date</label></th>
+              <th><label for="return-date">Return Date</label></th>
+              <th><label for="passenger-counter">passengers</label></th>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  id="orginal-place"
+                  placeholder="Leaving from..."
+                />
+              </td>
+              <td>
+                <input type="text" id="destinaion" placeholder="Going to..." />
+              </td>
+              <td><input type="date" id="date-time" /></td>
+              <td>
+                <!-- The onblur event occurs when an HTML element loses focus. -->
+                <input
+                  type="text"
+                  id="return-date"
+                  placeholder="Optional"
+                  onfocus="(this.type='Date')"
+                  onblur="if(this.value ==''){this.type='text'}"
+                />
+              </td>
+              <td><input type="number" id="passenger-counter" value="1" /></td>
+              <td><button type="submit" id="submit-form">Search</button></td>
+            </tr>
+          </form>
+        </table>
+      </section>
+      <section id="second-section">
+        <h2>Top travelled bus routes</h2>
+        <ul id="places-list">
+              <li class="the-place">
+                <a href="/"><img src="img/places/new york.jpg" alt="" /></a>
+              </li>
+            <li class="the-place">
+              <a href="/"><img src="img/places/toronto.jpg" alt="" /></a>
+            </li>
+            <li class="the-place">
+              <a href="/"><img src="img/places/las vegas.jpg" alt="" /></a>
+            </li>
+            <li class="the-place">
+              <a href="/"><img src="img/places/Atlantic.jpg" alt="" /></a>
+            </li>
+            <li class="the-place">
+              <a href="/"><img src="img/places/Philadelphia.jpg" alt="" /></a>
+            </li>
+            <li class="the-place">
+              <a href="/"><img src="img/places/orlando.jpg" alt="" /></a>
+            </li>
+          
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© KTC Inc, All rights reserved.</p>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="./img/icons/insta.png" alt="Instagram logo"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img src="./img/icons/facebook.png" alt="Facebook logo"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

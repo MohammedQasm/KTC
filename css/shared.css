@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+}
+
+#main-header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right,rgb(87, 77, 77),rgb(65, 60, 58));
+  padding: 0.6rem;
+}
+
+
+#main-header a:hover{
+  display: inline-block;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+#logo {
+  color: rgb(244, 255, 0);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 3px 4px rgb(96, 74, 224);
+  font-size: 3rem;
+  margin-left: 5.5rem;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+#shop {
+  margin-left: 6rem;
+}
+
+#usersneed {
+  margin-right: 6rem;
+}
+
+nav ul li {
+  padding: 0 1.5rem;
+}
+
+footer {
+  background: linear-gradient(to right,rgb(87, 77, 77),rgb(65, 60, 58));
+  padding: 2.25rem;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  color: #748DA6;
+  padding: 0;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6.25rem 0 18.75rem;
+}
+
+footer li {
+  width: 80px;
+  height: 80px;
+  margin: 0 50px;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+}
