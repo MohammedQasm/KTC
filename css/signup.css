@@ -1,0 +1,145 @@
+body {
+  background-color: #e3f0ff;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 43.75rem;
+}
+
+#show-part {
+  display: block;
+  width: 53.125rem;
+  margin: 0;
+  padding: 1.5;
+  text-align: center;
+}
+
+#login-part {
+  border: none;
+  width: 26.5625rem;
+  display: block;
+  margin: 4rem auto 4.4rem auto;
+  text-align: center;
+  background-color: rgb(65, 60, 58);
+  border-radius: 10px;
+  padding: 1rem 0 0 0;
+}
+
+#login-part h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+#login-part p {
+  color: white;
+}
+
+#login-part img {
+  position: relative;
+  top: -1rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+/* this is make the inputs to the center */
+#login-part #inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inputs input {
+  width: 60%;
+}
+
+#login-part input {
+  margin: 0.2rem auto;
+  padding: 0.6rem 2.5rem 0.6rem 0.3rem;
+  border: none;
+  border-radius: 6px;
+}
+
+#login-part input:focus {
+  box-shadow: 4px 4px 15px rgba(0, 253, 186, 0.325);
+  outline: none; /* ama outline nahelet la dawt inputakan kate clicke lasar dakret */
+  transform: scale(1.04);
+}
+
+.remembers {
+  display: flex;
+  margin-top: 0.625rem;
+  justify-content: space-evenly;
+  font-size: medium;
+}
+
+#remember-me-label {
+  color: white;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: rgb(60, 255, 0);
+}
+
+input[type="checkbox"]:checked + #remember-me-label {
+  color: rgb(60, 255, 0);
+  font-weight: bold;
+}
+
+#submit-button {
+  border: none;
+  padding: 0.4rem 4.5rem;
+  border-radius: 6px;
+  color: white;
+  background-color: gold;
+  font-size: large;
+  font-weight: 600;
+  width: 65%;
+  cursor: pointer;
+  /* bo brdna centere button */
+  display: block;
+  margin: 1rem auto;
+}
+
+#submit-button:hover {
+  transition: 0.5s;
+  color: black;
+  transform: scale(1.04);
+}
+
+#signup-With {
+  margin: 2.1875rem 0.625rem 1.25rem 0.625rem;
+}
+
+#signup-With p {
+  font-size: medium;
+  margin-bottom: 1.25rem;
+  margin-top: -0.9375rem;
+}
+
+#signup-With a {
+  margin: 0 0.625rem;
+}
+
+#sigin-button {
+  text-align: center;
+  display: block;
+  width: 65%;
+  margin: 1.25rem auto;
+  font-size: medium;
+  padding: 0.325rem 0.625rem 0.600rem 0.625rem;
+  border-radius: 6px;
+  background-color: gold;
+  color: white;
+  text-decoration: none;
+}
+
+#sigin-button:hover {
+  transition: 0.5s;
+  color: black;
+  background-color: gold;
+  transform: scale(1.04);
+}

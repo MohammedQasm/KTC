@@ -90,3 +90,16 @@ th {
   object-fit: cover;
   border-radius: 5px;
 }
+
+
+@media (max-width: 48rem){
+  #second-section #places-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 36rem){
+  #second-section #places-list{
+    grid-template-columns: 1fr;
+  }
+}

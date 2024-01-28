@@ -9,123 +9,201 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto:wght@900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/shared.css" />
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="shortcut icon" href="img/icons/bus.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="shortcut icon" href="img/icons/bus.ico" type="image/x-icon" />
     <title>KTC</title>
   </head>
   <body>
     <header id="main-header">
-      <a href="index.html" id="logo">KTC</a>
-      <nav>
-        <ul id="shop">
-          <li>
-            <a href="buses.html">Buses</a>
-          </li>
-          <li>
-            <a href="taxi.html">Taxis</a>
-          </li>
-        </ul>
-        <ul id="usersneed">
-          <li>
-            <select name="lang" id="chosen-language">
-              <option value="english">English</option>
-              <option value="kurdish">Kurdish</option>
-              <option value="arabic">Arabic</option>
-            </select>
-          </li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="signup.html">Sign Up</a>
-          </li>
-        </ul>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">KTC</a>
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- agar ms-auto labdain hamu itemakan dacheta lay chap -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="buses.html" class="nav-link">Buses</a>
+              </li>
+              <li class="nav-item">
+                <a href="taxi.html" class="nav-link">Taxi</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="signup.html" class="nav-link">SignUp</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Language</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Kurdish</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Arabic</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section id="first-section">
-        <h1>Find cheap bus tickets for your next trip.</h1>
-        <p>Easily compare and book your next trip with KTC</p>
-
-        <table>
-          <form action="/" method="POST" id="set">
-            <tr>
-              <th><label for="orginal-place">orginal place</label></th>
-              <th><label for="destinaion">Destinaion</label></th>
-              <th><label for="date-time">Date</label></th>
-              <th><label for="return-date">Return Date</label></th>
-              <th><label for="passenger-counter">passengers</label></th>
-            </tr>
-            <tr>
-              <td>
+    <main class="mt-4">
+      <section id="first-section" class="p-5">
+        <div class="p-5">
+          <h1>Find cheap bus tickets for your next trip.</h1>
+          <p>Easily compare and book your next trip with KTC</p>
+          <form>
+            <div class="row align-items-center g-3">
+              <div class="col-lg-2">
+                <label class="form-label" for="orginal-place"
+                  >orginal place</label
+                >
                 <input
-                  type="text"
+                  type="txt"
+                  class="form-control"
                   id="orginal-place"
-                  placeholder="Leaving from..."
                 />
-              </td>
-              <td>
-                <input type="text" id="destinaion" placeholder="Going to..." />
-              </td>
-              <td><input type="date" id="date-time" /></td>
-              <td>
-                <!-- The onblur event occurs when an HTML element loses focus. -->
+              </div>
+
+              <div class="col-lg-2">
+                <label class="form-label" for="destinaion">Destinaion</label>
                 <input
                   type="text"
-                  id="return-date"
-                  placeholder="Optional"
-                  onfocus="(this.type='Date')"
-                  onblur="if(this.value ==''){this.type='text'}"
+                  class="form-control"
+                  id="destinaion"
                 />
-              </td>
-              <td><input type="number" id="passenger-counter" value="1" /></td>
-              <td><button type="submit" id="submit-form">Search</button></td>
-            </tr>
+              </div>
+
+              <div class="col-lg-2">
+                <label class="form-label" for="leaving-date">Date</label>
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  id="leaving-date"
+                />
+              </div>
+
+              <div class="col-lg-2">
+                <label class="form-label" for="return-date"
+                  >Return Date</label
+                >
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  id="return-date"
+                />
+              </div>
+
+              <div class="col-lg-2">
+                <label class="form-label" for="passenger-number">passengers</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="passenger-number"
+                />
+              </div>
+
+              <div class="col-lg-2 mt-lg-5">
+                <button type="submit" class="btn btn-primary">Check Availability</button>
+              </div>
+            </div>
           </form>
-        </table>
+        </div>
       </section>
       <section id="second-section">
         <h2>Top travelled bus routes</h2>
         <ul id="places-list">
-              <li class="the-place">
-                <a href="/"><img src="img/places/new york.jpg" alt="" /></a>
-              </li>
-            <li class="the-place">
-              <a href="/"><img src="img/places/toronto.jpg" alt="" /></a>
-            </li>
-            <li class="the-place">
-              <a href="/"><img src="img/places/las vegas.jpg" alt="" /></a>
-            </li>
-            <li class="the-place">
-              <a href="/"><img src="img/places/Atlantic.jpg" alt="" /></a>
-            </li>
-            <li class="the-place">
-              <a href="/"><img src="img/places/Philadelphia.jpg" alt="" /></a>
-            </li>
-            <li class="the-place">
-              <a href="/"><img src="img/places/orlando.jpg" alt="" /></a>
-            </li>
-          
+          <li class="the-place">
+            <a href="/"><img src="img/places/new york.jpg" alt="" /></a>
+          </li>
+          <li class="the-place">
+            <a href="/"><img src="img/places/toronto.jpg" alt="" /></a>
+          </li>
+          <li class="the-place">
+            <a href="/"><img src="img/places/las vegas.jpg" alt="" /></a>
+          </li>
+          <li class="the-place">
+            <a href="/"><img src="img/places/Atlantic.jpg" alt="" /></a>
+          </li>
+          <li class="the-place">
+            <a href="/"><img src="img/places/Philadelphia.jpg" alt="" /></a>
+          </li>
+          <li class="the-place">
+            <a href="/"><img src="img/places/orlando.jpg" alt="" /></a>
+          </li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <p>© KTC Inc, All rights reserved.</p>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><img src="./img/icons/insta.png" alt="Instagram logo"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank"
-            ><img src="./img/icons/facebook.png" alt="Facebook logo"
-          /></a>
-        </li>
-      </ul>
+    <footer class="footer">
+      <aside class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </aside>
+
+      <aside class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </aside>
+
+      <aside class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </aside>
+
+      <aside class="footer-col">
+        <h4>follow us</h4>
+        <aside class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </aside>
+      </aside>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

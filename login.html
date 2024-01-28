@@ -9,138 +9,167 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto:wght@900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/shared.css" />
-    <link rel="stylesheet" href="css/loginandsignup.css" />
-    <link rel="shortcut icon" href="img/icons/bus.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <style>
-      .login-icons {
-        width: 5px;
-      }
-    </style>
-    <title>KTC Login</title>
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/icons/bus.ico" type="image/x-icon" />
+    <title>KTC</title>
   </head>
   <body>
     <header id="main-header">
-      <a href="index.html" id="logo">KTC</a>
-      <nav>
-        <ul id="shop">
-          <li>
-            <a href="buses.html">Buses</a>
-          </li>
-          <li>
-            <a href="taxi.html">Taxis</a>
-          </li>
-        </ul>
-        <ul id="usersneed">
-          <li>
-            <select name="lang" id="chosen-language">
-              <option value="english">English</option>
-              <option value="kurdish">Kurdish</option>
-              <option value="arabic">Arabic</option>
-            </select>
-          </li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="signup.html">Sign Up</a>
-          </li>
-        </ul>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">KTC</a>
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- agar ms-auto labdain hamu itemakan dacheta lay chap -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="buses.html" class="nav-link">Buses</a>
+              </li>
+              <li class="nav-item">
+                <a href="taxi.html" class="nav-link">Taxi</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item">
+                <a href="signup.html" class="nav-link">SignUp</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Language</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Kurdish</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Arabic</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <aside id="show-part">
-        <h1>Welcome back!</h1>
-        <img src="img/login.png" width="610px" />
-        <p>Login KTC, Book tickets that fit your needs.</p>
-      </aside>
-      <aside id="login-part">
-        <h1>Login to your KTC Account</h1>
-        <img src="img/icons/bus.ico" alt="KTC Logo" />
-        <form action="">
-          <div id="inputs">
-            <input
-              type="text"
-              name="username"
-              placeholder="username or email"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              minlength="8"
-              maxlength="64"
-              required
-              placeholder="password"
-            />
-          </div>
 
-          <div class="remembers">
-            <div>
+    <main class="my-5 p-4">
+        <aside id="show-part">
+          <img src="img/login.png" width="610px" />
+          <p>Login KTC, Book tickets that fit your needs.</p>
+        </aside>
+        <aside id="login-part">
+          <h1 class="mt-2 mb-4">Login to your KTC Account</h1>
+          <img src="img/icons/bus.ico" alt="KTC Logo" />
+          <form action="">
+            <div id="inputs">
               <input
-                type="checkbox"
-                name="remember-me"
-                value="2weeks-login"
-                id="remember-me"
+                type="text"
+                name="username"
+                placeholder="username or email"
+                required
               />
-              <label for="remember-me" id="remember-me-label"
-                >Remember me for 2 weeks</label
-              >
+              <input
+                type="password"
+                name="password"
+                minlength="8"
+                maxlength="64"
+                required
+                placeholder="password"
+                class="mt-2"
+              />
             </div>
-            <a href="">Forgot Password?</a>
-          </div>
+  
+            <div class="remembers">
+              <div>
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  value="2weeks-login"
+                  id="remember-me"
+                />
+                <label for="remember-me" id="remember-me-label"
+                  >Remember me for 2 weeks</label
+                >
+              </div>
+              <a href="">Forgot Password?</a>
+            </div>
+  
+            <button type="submit" id="submit-button">Sign in</button>
+  
+           
+  
+            <p class="quetion-paragraph">Don't have account ?</p>
+            <a href="signup.html" id="signup-button">Create a KTC account.</a>
+          </form>
+        </aside>
+      </main>
+  
 
-          <button type="submit">Sign in</button>
 
-          <div style="margin: 35px 10px 20px">
-            <p style="font-size: 14px; margin-bottom: 20px; margin-top: -15px;">Or SignIn With </p>
-            <a href="" style="margin: 0 10px"
-              ><i
-                class="fa-brands fa-facebook fa-2xl"
-                style="color: #d5d5d6"
-              ></i
-            ></a>
-            <a href="" style="margin: 0 10px"
-              ><i class="fa-brands fa-google fa-2xl" style="color: #d5d5d6"></i
-            ></a>
-            <a href="" style="margin: 0 10px"
-              ><i class="fa-brands fa-twitter fa-2xl" style="color: #d5d5d6"></i
-            ></a>
-          </div>
-
-          <p
-            style="
-              font-size: 14px;
-              font-weight: bolder;
-              margin-top: 0;
-            "
-          >
-            Don't have account ?
-          </p>
-          <div class="links">
-            <a href="">Create a KTC account.</a>
-          </div>
-        </form>
+    <footer class="footer">
+      <aside class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
       </aside>
-    </main>
-    <footer>
-      <p>© KTC Inc, All rights reserved.</p>
-      <ul>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank"
-            ><img src="./img/icons/insta.png" alt="Instagram logo"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank"
-            ><img src="./img/icons/facebook.png" alt="Facebook logo"
-          /></a>
-        </li>
-      </ul>
+
+      <aside class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </aside>
+
+      <aside class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </aside>
+
+      <aside class="footer-col">
+        <h4>follow us</h4>
+        <aside class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </aside>
+      </aside>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
