@@ -265,7 +265,7 @@ input[type="checkbox"]:checked + #remember-me-label {
 
   #login-part {
     height: auto;
-    padding: 1rem 20%;
+    padding: 1rem 5%;
   }
 
   #login-part h1 {
@@ -340,5 +340,74 @@ input[type="checkbox"]:checked + #remember-me-label {
 @media only screen and (min-width: 1200px) {
   #show-part {
     display: block;
+  }
+
+  #login-part {
+    height: auto;
+    padding: 1rem 3%;
+    width: 45%;  
+  }
+
+  #login-part h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+  }
+
+
+  #inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+  }
+
+  #inputs input::placeholder{
+    font-size: 1.4rem;
+  }
+
+  #login-part #inputs input {
+    width: 100% !important;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .remembers div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  /* CSS to change checkbox size */
+  .remembers input[type="checkbox"] {
+    width: 1.5rem; /* Adjust width as needed */
+    height: 1.5rem; /* Adjust height as needed */
+  }
+
+  #remember-me-label{
+    font-size: xx-large;
+  }
+  
+  .remembers a{
+    margin: 0 0 1rem 0;
+    font-size: xx-large;
+  }
+  #submit-button {
+    padding: 0.4rem 4.5rem;
+    font-size: 2rem !important;
+    font-weight: 600;
+    width: 100%;
+  }
+
+.quetion-paragraph{
+  font-size: xx-large;
+}
+
+  #signup-button {
+    padding: 0.4rem 4.5rem;
+    font-size: 2rem !important;
+    font-weight: 600;
+    width: 100%;
   }
 }
